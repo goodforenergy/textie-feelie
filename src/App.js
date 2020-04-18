@@ -7,6 +7,8 @@ function App() {
   const [sentences, setSentences] = useState([]);
   
   useEffect(() => {
+    let regexp = /(\S.+?[.!?])(?=\s+|$)/g;
+    let newSentences = Array.from(userText.matchAll(regexp), m => m[0]);
     // parse complete sentences
     // BREAK IT APART - userText
 
@@ -15,8 +17,8 @@ function App() {
     // Hello. My name is => ['Hello.']
     // Hello. My name is Helen! => ['Hello.', 'My name is Helen!']
     
-    const completeSentences = [];
-    setSentences(completeSentences);
+    // const completeSentences = [];
+    setSentences(newSentences);
   }, [userText]);
   
   return (

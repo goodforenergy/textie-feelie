@@ -3,7 +3,7 @@
 How to run test command:
 
 ```bash
-curl -X POST -u "apikey:{apiKey}" --header "Content-Type: application/json" --data-binary @./tone.json "{url}"
+curl -X POST -u "apikey:{key} --header "Content-Type: application/json" --data-binary @./tone.json "https://api.us-east.tone-analyzer.watson.cloud.ibm.com/instances/{instand}/v3/tone?version=2017-09-21"
 ```
 
 ## Available Scripts
