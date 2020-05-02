@@ -1,3 +1,5 @@
+import './EmotiveSentence.css';
+
 import React from 'react';
 
 /**
@@ -7,7 +9,9 @@ import React from 'react';
  * @param string props.sentence sentence to render
  */
 function EmotiveSentence({sentence}) {
-  return <span>{sentence}</span>;
+  const emotion = 'anger'; //getEmotion(emotion);
+  
+  return <span className={emotion}>{sentence}</span>;
 }
 
 export default EmotiveSentence;
